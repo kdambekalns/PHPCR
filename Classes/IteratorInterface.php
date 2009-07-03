@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: IteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,10 +33,10 @@ namespace F3\PHPCR;
  * append() is something we thought would be nice...
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: IteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface IteratorInterface extends \Iterator {
+interface PHPCR_IteratorInterface extends Iterator {
 
 	/**
 	 * Returns the next element. Commented as PHP dows not allow overriding methods from extended interfaces...

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Observation;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Observation;
 /**
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Observation;
  *
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface EventInterface {
+interface PHPCR_Observation_EventInterface {
 
 	/**
 	 * Generated on persist when a node is added.
@@ -124,7 +123,7 @@ interface EventInterface {
 	 * See event type constants above.
 	 *
 	 * @return string the absolute path associated with this event or NULL.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getPath();
 
@@ -143,7 +142,7 @@ interface EventInterface {
 	 * See event type constants above.
 	 *
 	 * @return string the identifier associated with this event or NULL.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getIdentifier();
 
@@ -153,7 +152,7 @@ interface EventInterface {
 	 * See event type constants above.
 	 *
 	 * @return array an array containing parameter information for instances of a NODE_MOVED event.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getInfo();
 
@@ -162,7 +161,7 @@ interface EventInterface {
 	 * ObservationManager bound to the Session that caused the event.
 	 *
 	 * @return the user data string.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getUserData();
 
@@ -173,7 +172,7 @@ interface EventInterface {
 	 * the returned value is implementation dependent.
 	 *
 	 * @return integer the date when the change was persisted that caused this event (milliseconds since epoch).
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getDate();
 

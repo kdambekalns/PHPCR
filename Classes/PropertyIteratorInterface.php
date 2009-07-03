@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: PropertyIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -32,15 +31,15 @@ namespace F3\PHPCR;
  * well as a skip method.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: PropertyIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface PropertyIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_PropertyIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next Property from the iterator.
 	 *
-	 * @return \F3\PHPCR\PropertyInterface
+	 * @return PHPCR_PropertyInterface
 	 * @throws OutOfBoundsException if the iterator contains no more elements.
 	 */
 	public function nextProperty();

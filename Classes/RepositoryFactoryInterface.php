@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: RepositoryFactoryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -35,16 +34,16 @@ namespace F3\PHPCR;
  *
  * Use repository factory based on parameters (the parameters below are examples):
  *    $parameters = array('com.vendor.address' => 'vendor://localhost:9999/myrepo');
- *    $repo = \F3\SomeRepository\RepositoryFactory::getRepository($parameters);
+ *    $repo = PHPCR_RepositoryFactory::getRepository($parameters);
  *
  * Get a default repository available in this environment:
- *    $repo = \F3\PHPCR\RepositoryFactory::getRepository();
+ *    $repo = PHPCR_RepositoryFactory::getRepository();
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: RepositoryFactoryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface RepositoryFactoryInterface {
+interface PHPCR_RepositoryFactoryInterface {
 
 	/**
 	 * Attempts to establish a connection to a repository using the given
@@ -64,8 +63,8 @@ interface RepositoryFactoryInterface {
 	 * trouble connecting to the repository.
 	 *
 	 * @param array|NULL $parameters string key/value pairs as repository arguments or NULL if a client wishes to connect to a default repository.
-	 * @return \F3\PHPCR\RepositoryInterface a repository instance or NULL if this implementation does not understand the passed parameters
-	 * @throws \F3\PHPCR\RepositoryException if no suitable repository is found or another error occurs.
+	 * @return PHPCR_RepositoryInterface a repository instance or NULL if this implementation does not understand the passed parameters
+	 * @throws PHPCR_RepositoryException if no suitable repository is found or another error occurs.
 	 */
 	public function getRepository(array $parameters = NULL);
 

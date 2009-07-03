@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Security;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Security;
 /**
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: AccessControlPolicyIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,15 +33,15 @@ namespace F3\PHPCR\Security;
  *
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: AccessControlPolicyIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface AccessControlPolicyIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_Security_AccessControlPolicyIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next AccessControlPolicy in the iteration.
 	 *
-	 * @return \F3\PHPCR\Security\AccessControlPolicyInterface the next AccessControlPolicy in the iteration
+	 * @return PHPCR_Security_AccessControlPolicyInterface the next AccessControlPolicy in the iteration
 	 * @throws OutOfBoundsException if iteration has no more AccessControlPolicys
 	 */
 	public function nextAccessControlPolicy();

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Retention;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Retention;
 /**
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: RetentionManagerInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Retention;
  *
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: RetentionManagerInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface RetentionManagerInterface {
+interface PHPCR_Retention_RetentionManagerInterface {
 
 	/**
 	 * Returns all hold objects that have been added through this API to the
@@ -45,9 +44,9 @@ interface RetentionManagerInterface {
 	 *
 	 * @param string $absPath an absolute path.
 	 * @return array All hold objects that have been added to the existing node at absPath through this API or an empty array if no hold has been set.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to retrieve the holds.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node at absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to retrieve the holds.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getHolds($absPath);
 
@@ -61,12 +60,12 @@ interface RetentionManagerInterface {
 	 * @param string $absPath an absolute path.
 	 * @param string $name an application-dependent string.
 	 * @param boolean $isDeep a boolean indicating if the hold applies to the subgraph.
-	 * @return \F3\PHPCR\Retention\HoldInterface The Hold applied.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to perform the operation.
-	 * @throws \F3\PHPCR\Lock\LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Version\VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_Retention_HoldInterface The Hold applied.
+	 * @throws PHPCR_PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to perform the operation.
+	 * @throws PHPCR_Lock_LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
+	 * @throws PHPCR_Version_VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function addHold($absPath, $name, $isDeep);
 
@@ -75,25 +74,25 @@ interface RetentionManagerInterface {
 	 * take effect until a save is performed.
 	 *
 	 * @param string $absPath an absolute path.
-	 * @param \F3\PHPCR\Retention\HoldInterface $hold the hold to be removed.
+	 * @param PHPCR_Retention_HoldInterface $hold the hold to be removed.
 	 * @return void
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to perform the operation.
-	 * @throws \F3\PHPCR\Lock\LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Version\VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to perform the operation.
+	 * @throws PHPCR_Lock_LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
+	 * @throws PHPCR_Version_VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
-	public function removeHold($absPath, \F3\PHPCR\Retention\HoldInterface $hold);
+	public function removeHold($absPath, PHPCR_Retention_HoldInterface $hold);
 
 	/**
 	 * Returns the retention policy that has been set using setRetentionPolicy()
 	 * on the node at $absPath or null if no policy has been set.
 	 *
 	 * @param string $absPath an absolute path to an existing node.
-	 * @return \F3\PHPCR\Retention\RetentionPolicyInterface The retention policy that applies to the existing node at $absPath or NULL if no policy applies.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to retrieve the policy.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_Retention_RetentionPolicyInterface The retention policy that applies to the existing node at $absPath or NULL if no policy applies.
+	 * @throws PHPCR_PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to retrieve the policy.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getRetentionPolicy($absPath);
 
@@ -104,15 +103,15 @@ interface RetentionManagerInterface {
 	 * until a save is performed.
 	 *
 	 * @param string $absPath an absolute path to an existing node.
-	 * @param \F3\PHPCR\Retention\RetentionPolicyInterface $retentionPolicy a retention policy.
+	 * @param PHPCR_Retention_RetentionPolicyInterface $retentionPolicy a retention policy.
 	 * @return void
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to perform the operation.
-	 * @throws \F3\PHPCR\Lock\LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Version\VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to perform the operation.
+	 * @throws PHPCR_Lock_LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
+	 * @throws PHPCR_Version_VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
-	public function setRetentionPolicy($absPath, \F3\PHPCR\Retention\RetentionPolicyInterface $retentionPolicy);
+	public function setRetentionPolicy($absPath, PHPCR_Retention_RetentionPolicyInterface $retentionPolicy);
 
 	/**
 	 * Causes the current retention policy on the node at $absPath to no longer
@@ -120,11 +119,11 @@ interface RetentionManagerInterface {
 	 *
 	 * @param string $absPath an absolute path to an existing node.
 	 * @return void
-	 * @throws \F3\PHPCR\PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to perform the operation.
-	 * @throws \F3\PHPCR\Lock\LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Version\VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node at $absPath exists or the session does not have sufficient access to retrieve the node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to perform the operation.
+	 * @throws PHPCR_Lock_LockException if a lock applies at the node at $absPath and this implementation performs this validation immediately.
+	 * @throws PHPCR_Version_VersionException if the node at $absPath is read-only due to a checked-in node and this implementation performs this validation immediately.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function removeRetentionPolicy($absPath);
 

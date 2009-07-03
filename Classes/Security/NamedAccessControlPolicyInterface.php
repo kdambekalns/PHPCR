@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Security;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Security;
 /**
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: NamedAccessControlPolicyInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -36,17 +35,17 @@ namespace F3\PHPCR\Security;
  *
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: NamedAccessControlPolicyInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface NamedAccessControlPolicyInterface extends \F3\PHPCR\Security\AccessControlPolicyInterface {
+interface PHPCR_Security_NamedAccessControlPolicyInterface extends PHPCR_Security_AccessControlPolicyInterface {
 
 	/**
 	 * Returns the name of the access control policy, which is JCR name and should
 	 * be unique among the choices applicable to any particular node.
 	 *
 	 * @return string the name of the access control policy. A JCR name.
-	 * @throws \F3\PHPCR\RepositoryException - if an error occurs.
+	 * @throws PHPCR_RepositoryException - if an error occurs.
 	 */
 	public function getName();
 

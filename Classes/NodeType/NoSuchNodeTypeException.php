@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NoSuchNodeTypeException.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\NodeType;
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NoSuchNodeTypeException.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class NoSuchNodeTypeException extends \F3\PHPCR\RepositoryException {
+class PHPCR_NodeType_NoSuchNodeTypeException extends PHPCR_RepositoryException {
 }
 
 ?>

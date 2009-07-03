@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,17 +23,17 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: BinaryInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  */
 
 /**
  * A Binary object holds a JCR property value of type BINARY.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: BinaryInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface BinaryInterface {
+interface PHPCR_BinaryInterface {
 
 	/**
 	 * Returns a stream representation of this value.
@@ -43,8 +42,8 @@ interface BinaryInterface {
 	 * stream.
 	 *
 	 * @return resource A stream representation of this value.
-	 * @throws \BadMethodCallException if dispose() has already been called on this Binary
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws BadMethodCallException if dispose() has already been called on this Binary
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getStream();
 
@@ -55,10 +54,10 @@ interface BinaryInterface {
 	 * @param string $bytes the buffer into which the data is read.
 	 * @param integer $position the position in this Binary from which to start reading bytes.
 	 * @return integer the number of bytes read into the buffer
-	 * @throws \RuntimeException if an I/O error occurs.
-	 * @throws \InvalidArgumentException if offset is negative.
-	 * @throws \BadMethodCallException if dispose() has already been called on this Binary
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws RuntimeException if an I/O error occurs.
+	 * @throws InvalidArgumentException if offset is negative.
+	 * @throws BadMethodCallException if dispose() has already been called on this Binary
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function read(&$bytes, $position);
 
@@ -66,8 +65,8 @@ interface BinaryInterface {
 	 * Returns the size of this Binary value in bytes.
 	 *
 	 * @return integer the size of this value in bytes.
-	 * @throws \BadMethodCallException if dispose() has already been called on this Binary
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws BadMethodCallException if dispose() has already been called on this Binary
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getSize();
 

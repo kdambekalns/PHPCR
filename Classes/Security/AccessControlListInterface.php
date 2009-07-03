@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Security;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Security;
 /**
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: AccessControlListInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -36,10 +35,10 @@ namespace F3\PHPCR\Security;
  *
  * @package PHPCR
  * @subpackage Security
- * @version $Id$
+ * @version $Id: AccessControlListInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface AccessControlListInterface extends \F3\PHPCR\Security\AccessControlPolicyInterface {
+interface PHPCR_Security_AccessControlListInterface extends PHPCR_Security_AccessControlPolicyInterface {
 
 	/**
 	 * Returns all access control entries present with this policy.
@@ -47,7 +46,7 @@ interface AccessControlListInterface extends \F3\PHPCR\Security\AccessControlPol
 	 * AccessControlEntry has been assigned through this API.
 	 *
 	 * @return array all AccessControlEntry objects present with this policy.
-	 * @throws \F3\PHPCR\RepositoryException - if an error occurs.
+	 * @throws PHPCR_RepositoryException - if an error occurs.
 	 */
 	public function getAccessControlEntries();
 
@@ -69,8 +68,8 @@ interface AccessControlListInterface extends \F3\PHPCR\Security\AccessControlPol
 	 * @param java.security.Principal $principal - a Principal.
 	 * @param array $privileges - an array of Privileges.
 	 * @return boolean true if this policy was modify; false otherwise.
-	 * @throws \F3\PHPCR\Security\AccessControlException - if the specified principal or any of the privileges does not existor if some other access control related exception occurs.
-	 * @throws \F3\PHPCR\RepositoryException - if another error occurs.
+	 * @throws PHPCR_Security_AccessControlException - if the specified principal or any of the privileges does not existor if some other access control related exception occurs.
+	 * @throws PHPCR_RepositoryException - if another error occurs.
 	 * @todo find replacement for java.security.Principal
 	 */
 	public function addAccessControlEntry($principal, array $privileges);
@@ -82,12 +81,12 @@ interface AccessControlListInterface extends \F3\PHPCR\Security\AccessControlPol
 	 * to a node by calling AccessControlManager.setPolicy(String, AccessControlPolicy)
 	 * and save is performed.
 	 *
-	 * @param \F3\PHPCR\Security\AccessControlEntryInterface $ace the access control entry to be removed.
+	 * @param PHPCR_Security_AccessControlEntryInterface $ace the access control entry to be removed.
 	 * @return void
-	 * @throws \F3\PHPCR\Security\AccessControlException if the specified entry is not present on the specified node.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_Security_AccessControlException if the specified entry is not present on the specified node.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 * */
-	public function removeAccessControlEntry(\F3\PHPCR\Security\AccessControlEntryInterface $ace);
+	public function removeAccessControlEntry(PHPCR_Security_AccessControlEntryInterface $ace);
 
 }
 

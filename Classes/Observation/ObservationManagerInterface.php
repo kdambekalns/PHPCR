@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Observation;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Observation;
 /**
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: ObservationManagerInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  */
 
 /**
@@ -35,10 +34,10 @@ namespace F3\PHPCR\Observation;
  *
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: ObservationManagerInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface ObservationManagerInterface {
+interface PHPCR_Observation_ObservationManagerInterface {
 
 	/**
 	 * Adds an event listener that listens for the specified eventTypes (a
@@ -81,7 +80,7 @@ interface ObservationManagerInterface {
 	 * repositories observation of changes in the jcr:system subgraph may not be
 	 * supported
 	 *
-	 * @param \F3\PHPCR\Observation\EventListenerInterface $listener - an EventListener object.
+	 * @param PHPCR_Observation_EventListenerInterface $listener - an EventListener object.
 	 * @param integer $eventTypes - A combination of one or more event type constants encoded as a bitmask.
 	 * @param string $absPath - an absolute path.
 	 * @param boolean $isDeep - a boolean.
@@ -89,9 +88,9 @@ interface ObservationManagerInterface {
 	 * @param array $nodeTypeName - array of node type names.
 	 * @param boolean $noLocal - a boolean.
 	 * @return void
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
-	public function addEventListener(\F3\PHPCR\Observation\EventListenerInterface $listener, $eventTypes, $absPath, $isDeep, array $uuid, array $nodeTypeName, $noLocal);
+	public function addEventListener(PHPCR_Observation_EventListenerInterface $listener, $eventTypes, $absPath, $isDeep, array $uuid, array $nodeTypeName, $noLocal);
 
 	/**
 	 * Deregisters an event listener.
@@ -101,17 +100,17 @@ interface ObservationManagerInterface {
 	 * method. In this case, the deregistration method returns immediately, but
 	 * deregistration will effectively be delayed until the listener completes.
 	 *
-	 * @param \F3\PHPCR\Observation\EventListenerInterface $listener - The listener to deregister.
+	 * @param PHPCR_Observation_EventListenerInterface $listener - The listener to deregister.
 	 * @return void
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
-	public function removeEventListener(\F3\PHPCR\Observation\EventListenerInterface $listener);
+	public function removeEventListener(PHPCR_Observation_EventListenerInterface $listener);
 
 	/**
 	 * Returns all event listeners that have been registered through this session. If no listeners have been registered, an empty iterator is returned.
 	 *
 	 * @return an EventListenerIterator.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getRegisteredEventListeners();
 
@@ -120,7 +119,7 @@ interface ObservationManagerInterface {
 	 *
 	 * @param string $userData the user data
 	 * @return void
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function setUserData($userData);
 
@@ -143,8 +142,8 @@ interface ObservationManagerInterface {
 	 * @param boolean $isDeep a <code>boolean</code>.
 	 * @param array $uuid array of identifiers.
 	 * @param array $nodeTypeName array of node type names.
-	 * @return \F3\PHPCR\Observation\EventJournalInterface an EventJournal (or NULL).
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return PHPCR_Observation_EventJournalInterface an EventJournal (or NULL).
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getEventJournal($eventTypes = NULL, $absPath = NULL, $isDeep = NULL, array $uuid = NULL, array $nodeTypeName = NULL);
 

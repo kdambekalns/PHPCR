@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: LowerCaseInterface.php 1995 2009-03-14 19:57:47Z k-fish $
  */
 
 /**
@@ -39,15 +38,15 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: LowerCaseInterface.php 1995 2009-03-14 19:57:47Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface LowerCaseInterface extends \F3\PHPCR\Query\QOM\DynamicOperandInterface {
+interface PHPCR_Query_QOM_LowerCaseInterface extends PHPCR_Query_QOM_DynamicOperandInterface {
 
 	/**
 	 * Gets the operand whose value is converted to a lower-case string.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\DynamicOperandInterface the operand; non-null
+	 * @return PHPCR_Query_QOM_DynamicOperandInterface the operand; non-null
 	 */
 	public function getOperand();
 

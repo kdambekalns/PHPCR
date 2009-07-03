@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: RowIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,15 +33,15 @@ namespace F3\PHPCR\Query;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: RowIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface RowIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_Query_RowIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next Row in the iteration.
 	 *
-	 * @return \F3\PHPCR\Query\RowInterface
+	 * @return PHPCR_Query_RowInterface
 	 * @throws OutOfBoundsException if the iterator contains no more elements.
 	 */
 	public function nextRow();

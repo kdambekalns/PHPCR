@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: ComparisonInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -73,30 +72,30 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: ComparisonInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface ComparisonInterface extends \F3\PHPCR\Query\QOM\ConstraintInterface {
+interface PHPCR_Query_QOM_ComparisonInterface extends PHPCR_Query_QOM_ConstraintInterface {
 
 	/**
 	 *
 	 * Gets the first operand.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\DynamicOperandInterface the operand; non-null
+	 * @return PHPCR_Query_QOM_DynamicOperandInterface the operand; non-null
 	 */
 	public function getOperand1();
 
 	/**
 	 * Gets the operator.
 	 *
-	 * @return string one of \F3\PHPCR\Query\QOM\QueryObjectModelConstantsInterface.JCR_OPERATOR_*
+	 * @return string one of PHPCR_Query_QOM_QueryObjectModelConstantsInterface.JCR_OPERATOR_*
 	 */
 	public function getOperator();
 
 	/**
 	 * Gets the second operand.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\StaticOperandInterface the operand; non-null
+	 * @return PHPCR_Query_QOM_StaticOperandInterface the operand; non-null
 	 */
 	public function getOperand2();
 

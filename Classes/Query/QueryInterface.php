@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Query;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface QueryInterface {
+interface PHPCR_Query_QueryInterface {
 
 	/**
 	 * Flags determining the language of the query
@@ -47,9 +46,9 @@ interface QueryInterface {
 	/**
 	 * Executes this query and returns a QueryResult object.
 	 *
-	 * @return \F3\PHPCR\Query\QueryInterface a QueryResult object
-	 * @throws \F3\PHPCR\Query\InvalidQueryException if the query contains an unbound variable.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return PHPCR_Query_QueryInterface a QueryResult object
+	 * @throws PHPCR_Query_InvalidQueryException if the query contains an unbound variable.
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function execute();
 
@@ -99,8 +98,8 @@ interface QueryInterface {
 	 * of the nt:query node that stores the query.
 	 *
 	 * @return string path of the node representing this query.
-	 * @throws \F3\PHPCR\ItemNotFoundException if this query is not a stored query.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ItemNotFoundException if this query is not a stored query.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getStoredQueryPath();
 
@@ -116,14 +115,14 @@ interface QueryInterface {
 	 * node is appended to the end of the child node list.
 	 *
 	 * @param string $absPath absolute path the query should be stored at
-	 * @return \F3\PHPCR\NodeInterface the newly created node.
-	 * @throws \F3\PHPCR\ItemExistsException if an item at the specified path already exists, same-name siblings are not allowed and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\PathNotFoundException if the specified path implies intermediary Nodes that do not exist or the last element of relPath has an index, and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\NodeType\ConstraintViolationException if a node type or implementation-specific constraint is violated or if an attempt is made to add a node as the child of a property and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Version\VersionException if the node to which the new child is being added is read-only due to a checked-in node and this implementation performs this validation immediately.
-	 * @throws \F3\PHPCR\Lock\LockException if a lock prevents the addition of the node and this implementation performs this validation immediately instead of waiting until save.
-	 * @throws \F3\PHPCR\UnsupportedRepositoryOperationException in a level 1 implementation.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs or if the absPath provided has an index on its final element.
+	 * @return PHPCR_NodeInterface the newly created node.
+	 * @throws PHPCR_ItemExistsException if an item at the specified path already exists, same-name siblings are not allowed and this implementation performs this validation immediately.
+	 * @throws PHPCR_PathNotFoundException if the specified path implies intermediary Nodes that do not exist or the last element of relPath has an index, and this implementation performs this validation immediately.
+	 * @throws PHPCR_NodeType_ConstraintViolationException if a node type or implementation-specific constraint is violated or if an attempt is made to add a node as the child of a property and this implementation performs this validation immediately.
+	 * @throws PHPCR_Version_VersionException if the node to which the new child is being added is read-only due to a checked-in node and this implementation performs this validation immediately.
+	 * @throws PHPCR_Lock_LockException if a lock prevents the addition of the node and this implementation performs this validation immediately instead of waiting until save.
+	 * @throws PHPCR_UnsupportedRepositoryOperationException in a level 1 implementation.
+	 * @throws PHPCR_RepositoryException if another error occurs or if the absPath provided has an index on its final element.
 	 */
 	public function storeAsNode($absPath);
 

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryResultInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,16 +32,16 @@ namespace F3\PHPCR\Query;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryResultInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface QueryResultInterface {
+interface PHPCR_Query_QueryResultInterface {
 
 	/**
 	 * Returns an array of all the column names in the table view of this result set.
 	 *
 	 * @return array array holding the column names.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getColumnNames();
 
@@ -50,8 +49,8 @@ interface QueryResultInterface {
 	 * Returns an iterator over the Rows of the result table. The rows are
 	 * returned according to the ordering specified in the query.
 	 *
-	 * @return \F3\PHPCR\Query\RowIteratorInterface a RowIterator
-	 * @throws \F3\PHPCR\RepositoryException if this call is the second time either getRows() or getNodes() has been called on the same QueryResult object or if another error occurs.
+	 * @return PHPCR_Query_RowIteratorInterface a RowIterator
+	 * @throws PHPCR_RepositoryException if this call is the second time either getRows() or getNodes() has been called on the same QueryResult object or if another error occurs.
 	*/
 	public function getRows();
 
@@ -59,8 +58,8 @@ interface QueryResultInterface {
 	 * Returns an iterator over all nodes that match the query. The nodes are
 	 * returned according to the ordering specified in the query.
 	 *
-	 * @return \F3\PHPCR\NodeIteratorInterface a NodeIterator
-	 * @throws \F3\PHPCR\RepositoryException if the query contains more than one selector, if this call is the second time either getRows() or getNodes() has been called on the same QueryResult object or if another error occurs.
+	 * @return PHPCR_NodeIteratorInterface a NodeIterator
+	 * @throws PHPCR_RepositoryException if the query contains more than one selector, if this call is the second time either getRows() or getNodes() has been called on the same QueryResult object or if another error occurs.
 	 */
 	public function getNodes();
 

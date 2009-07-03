@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Version;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Version;
 /**
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: LabelExistsVersionException.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -35,10 +34,10 @@ namespace F3\PHPCR\Version;
  *
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: LabelExistsVersionException.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class LabelExistsVersionException extends \F3\PHPCR\Version\VersionException {
+class PHPCR_Version_LabelExistsVersionException extends PHPCR_Version_VersionException {
 }
 
 ?>

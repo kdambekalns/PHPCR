@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Version;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Version;
 /**
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: VersionInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,16 +33,16 @@ namespace F3\PHPCR\Version;
  *
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: VersionInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface VersionInterface extends \F3\PHPCR\NodeInterface {
+interface PHPCR_Version_VersionInterface extends PHPCR_NodeInterface {
 
 	/**
 	 * Returns the VersionHistory that contains this Version
 	 *
-	 * @return \F3\PHPCR\Version\VersionHistoryInterface the VersionHistory that contains this Version
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return PHPCR_Version_VersionHistoryInterface the VersionHistory that contains this Version
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getContainingHistory();
 
@@ -52,8 +51,8 @@ interface VersionInterface extends \F3\PHPCR\NodeInterface {
 	 * value of the jcr:created property in the nt:version node that represents
 	 * this version.
 	 *
-	 * @return \DateTime a \DateTime object
-	 * @throws \F3\PHPCR\RepositoryException - if an error occurs
+	 * @return DateTime a DateTime object
+	 * @throws PHPCR_RepositoryException - if an error occurs
 	 */
 	public function getCreated();
 
@@ -67,8 +66,8 @@ interface VersionInterface extends \F3\PHPCR\NodeInterface {
 	 * to getting the unique successor (if any) of this version.
 	 *
 	 * @see VersionHistory#getAllLinearVersions()
-	 * @return \F3\PHPCR\VersionInterface a Version or NULL if no linear successor exists.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @return PHPCR_VersionInterface a Version or NULL if no linear successor exists.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getLinearSuccessor();
 
@@ -77,8 +76,8 @@ interface VersionInterface extends \F3\PHPCR\NodeInterface {
 	 * returning all the nt:version nodes referenced by the jcr:successors
 	 * multi-value property in the nt:version node that represents this version.
 	 *
-	 * @return array of \F3\PHPCR\Version\VersionInterface
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return array of PHPCR_Version_VersionInterface
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getSuccessors();
 
@@ -92,8 +91,8 @@ interface VersionInterface extends \F3\PHPCR\NodeInterface {
 	 * to getting the unique predecessor (if any) of this version.
 	 *
 	 * @see VersionHistory#getAllLinearVersions()
-	 * @return \F3\PHPCR\Version\VersionInterface a Version or NULL if no linear predecessor exists.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @return PHPCR_Version_VersionInterface a Version or NULL if no linear predecessor exists.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getLinearPredecessor();
 
@@ -103,16 +102,16 @@ interface VersionInterface extends \F3\PHPCR\NodeInterface {
 	 * the nt:version nodes whose jcr:successors property includes a reference
 	 * to the nt:version node that represents this version.
 	 *
-	 * @return array of \F3\PHPCR\Version\VersionInterface
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return array of PHPCR_Version_VersionInterface
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getPredecessors();
 
 	/**
 	 * Returns the frozen node of this version.
 	 *
-	 * @return \F3\PHPCR\NodeInterface a Node object
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @return PHPCR_NodeInterface a Node object
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getFrozenNode();
 

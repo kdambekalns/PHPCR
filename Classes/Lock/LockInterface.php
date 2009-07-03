@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Lock;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Lock;
 /**
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Lock;
  *
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface LockInterface {
+interface PHPCR_Lock_LockInterface {
 
 	/**
 	 * Returns the value of the jcr:lockOwner property. This is either the
@@ -65,7 +64,7 @@ interface LockInterface {
 	 * is a locked node) will only return N if N is the lock holder. If N is in
 	 * the subgraph of the lock holder, H, then this call will return H.
 	 *
-	 * @return \F3\PHPCR\NodeInterface a Node
+	 * @return PHPCR_NodeInterface a Node
 	 */
 	public function getNode();
 
@@ -88,7 +87,7 @@ interface LockInterface {
 	 *
 	 * @return integer the number of seconds remaining until this lock times out.
 
-	 * @throws \F3\PHPCR\RepositoryException if the timeout is infinite or unknown
+	 * @throws PHPCR_RepositoryException if the timeout is infinite or unknown
 	 */
 	public function getSecondsRemaining();
 
@@ -130,8 +129,8 @@ interface LockInterface {
 	 * timer so that the lock does not timeout and expire. If this lock's time-to-live
 	 * is not governed by a timer, then this method has no effect.
 	 *
-	 * @throws \F3\PHPCR\Lock\LockException if this Session does not hold the correct lock token for this lock.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_Lock_LockException if this Session does not hold the correct lock token for this lock.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function refresh();
 

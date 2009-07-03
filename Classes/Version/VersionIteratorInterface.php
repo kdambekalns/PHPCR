@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Version;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Version;
 /**
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: VersionIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,15 +33,15 @@ namespace F3\PHPCR\Version;
  *
  * @package PHPCR
  * @subpackage Version
- * @version $Id$
+ * @version $Id: VersionIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface VersionIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_Version_VersionIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next Version in the iteration.
 	 *
-	 * @return \F3\PHPCR\Version\VersionInterface the next Version in the iteration
+	 * @return PHPCR_Version_VersionInterface the next Version in the iteration
 	 * @throws OutOfBoundsException if iteration has no more Versions.
 	 */
 	public function nextVersion();

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: SimpleCredentials.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -32,11 +31,11 @@ namespace F3\PHPCR;
  * user ID/password credentials.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: SimpleCredentials.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  * @scope prototype
  */
-final class SimpleCredentials implements \F3\PHPCR\CredentialsInterface {
+final class SimpleCredentials implements PHPCR_CredentialsInterface {
 
 	/**
 	 * @var string
@@ -96,7 +95,7 @@ final class SimpleCredentials implements \F3\PHPCR\CredentialsInterface {
 	 */
 	public function setAttribute($name, $value) {
 		if ($name === NULL) {
-			throw new \InvalidArgumentException('$name cannot be null', 1212580046);
+			throw new InvalidArgumentException('$name cannot be null', 1212580046);
 		}
 
 			// null value is the same as removeAttribute()

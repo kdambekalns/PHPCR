@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: GuestCredentials.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,11 +33,11 @@ namespace F3\PHPCR;
  * GuestCredentials remain implementation specific.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: GuestCredentials.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  * @scope prototype
  */
-final class GuestCredentials implements \F3\PHPCR\CredentialsInterface {
+final class GuestCredentials implements PHPCR_CredentialsInterface {
 
 }
 

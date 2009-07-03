@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: DescendantNodeJoinConditionInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  */
 
 /**
@@ -39,10 +38,10 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: DescendantNodeJoinConditionInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface DescendantNodeJoinConditionInterface extends \F3\PHPCR\Query\QOM\JoinConditionInterface {
+interface PHPCR_Query_QOM_DescendantNodeJoinConditionInterface extends PHPCR_Query_QOM_JoinConditionInterface {
 
 	/**
 	 * Gets the name of the descendant selector.

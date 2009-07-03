@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Observation;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Observation;
 /**
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventJournalInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,10 +33,10 @@ namespace F3\PHPCR\Observation;
  *
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventJournalInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface EventJournalInterface extends \F3\PHPCR\Observation\EventIteratorInterface {
+interface PHPCR_Observation_EventJournalInterface extends PHPCR_Observation_EventIteratorInterface {
 
 	/**
 	 * Skip all elements of the iterator earlier than date.

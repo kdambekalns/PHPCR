@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\NodeType;
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterface {
+interface PHPCR_NodeType_NodeTypeInterface extends PHPCR_NodeType_NodeTypeDefinitionInterface {
 
 	/**
 	 * A constant for the node type name nt:base (in extended form).
@@ -313,7 +312,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 * hierarchy. For primary types apart from nt:base, this list will always
 	 * include at least nt:base. For mixin types, there is no required supertype.
 	 *
-	 * @return array of \F3\PHPCR\NodeType\NodeType objects.
+	 * @return array of PHPCR_NodeType_NodeType objects.
 	 */
 	public function getSupertypes();
 
@@ -324,7 +323,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 * size 0 or 1. In systems that support multiple inheritance of node
 	 * types this array may be of size greater than 1.
 	 *
-	 * @return array of \F3\PHPCR\NodeType\NodeType objects.
+	 * @return array of PHPCR_NodeType_NodeType objects.
 	 */
 	public function getDeclaredSupertypes();
 
@@ -334,7 +333,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 *
 	 * @see getDeclaredSubtypes()
 	 *
-	 * @return \F3\PHPCR\NodeType\NodeTypeIteratorInterface a NodeTypeIterator.
+	 * @return PHPCR_NodeType_NodeTypeIteratorInterface a NodeTypeIterator.
 	 */
 	public function getSubtypes();
 
@@ -345,7 +344,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 *
 	 * @see getSubtypes()
 	 *
-	 * @return \F3\PHPCR\NodeType\NodeTypeIteratorInterface a NodeTypeIterator.
+	 * @return PHPCR_NodeType_NodeTypeIteratorInterface a NodeTypeIterator.
 	 */
 	public function getDeclaredSubtypes();
 
@@ -363,7 +362,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 * type. This includes both those property definitions actually declared
 	 * in this node type and those inherited from the supertypes of this type.
 	 *
-	 * @return array an array of \F3\PHPCR\NodeType\PropertyDefinition containing the property definitions.
+	 * @return array an array of PHPCR_NodeType_PropertyDefinition containing the property definitions.
 	 */
 	public function getPropertyDefinitions();
 
@@ -372,7 +371,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 * This includes both those child node definitions actually declared in this
 	 * node type and those inherited from the supertypes of this node type.
 	 *
-	 * @return array an array of \F3\PHPCR\NodeType\NodeDefinition containing the child node definitions.
+	 * @return array an array of PHPCR_NodeType_NodeDefinition containing the child node definitions.
 	 */
 	public function getChildNodeDefinitions();
 
@@ -381,7 +380,7 @@ interface NodeTypeInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterfa
 	 * Otherwise returns false.
 	 *
 	 * @param string $propertyName The name of the property
-	 * @param \F3\PHPCR\ValueInterface|array $value A \F3\PHPCR\ValueInterface object or an array of \F3\PHPCR\ValueInterface objects.
+	 * @param PHPCR_ValueInterface|array $value A PHPCR_ValueInterface object or an array of PHPCR_ValueInterface objects.
 	 * @return boolean
 	 */
 	public function canSetProperty($propertyName, $value);

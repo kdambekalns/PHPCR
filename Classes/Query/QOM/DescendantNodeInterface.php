@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: DescendantNodeInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  */
 
 /**
@@ -40,10 +39,10 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: DescendantNodeInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface DescendantNodeInterface extends \F3\PHPCR\Query\QOM\ConstraintInterface {
+interface PHPCR_Query_QOM_DescendantNodeInterface extends PHPCR_Query_QOM_ConstraintInterface {
 
 	/**
 	 * Gets the name of the selector against which to apply this constraint.

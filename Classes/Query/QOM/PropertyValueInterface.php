@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: PropertyValueInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -41,10 +40,10 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: PropertyValueInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface PropertyValueInterface extends \F3\PHPCR\Query\QOM\DynamicOperandInterface {
+interface PHPCR_Query_QOM_PropertyValueInterface extends PHPCR_Query_QOM_DynamicOperandInterface {
 
 	/**
 	 * Gets the name of the selector against which to evaluate this operand.

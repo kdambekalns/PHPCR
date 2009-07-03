@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: ValueFactoryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -32,20 +31,20 @@ namespace F3\PHPCR;
  * then be used to set properties.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: ValueFactoryInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface ValueFactoryInterface {
+interface PHPCR_ValueFactoryInterface {
 
 	/**
-	 * Returns a \F3\PHPCR\Binary object with a value consisting of the content of
+	 * Returns a PHPCR_Binary object with a value consisting of the content of
 	 * the specified resource handle.
 	 * The passed resource handle is closed before this method returns either normally
 	 * or because of an exception.
 	 *
 	 * @param resource $handle
-	 * @return \F3\PHPCR\BinaryInterface
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @return PHPCR_BinaryInterface
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function createBinary($handle);
 
@@ -60,15 +59,15 @@ interface ValueFactoryInterface {
 	 * * if the given $value is a Node object, it's Identifier is fetched for the
 	 *   Value object and the type of that object will be WEAKREFERENCE if $weak
 	 *   is set to TRUE
-	 * * if the given $Value is a \DateTime object, the Value type will be DATE.
+	 * * if the given $Value is a DateTime object, the Value type will be DATE.
 	 *
 	 * @param mixed $value The value to use when creating the Value object
 	 * @param integer $type Type request for the Value object
 	 * @param boolean $weak When a Node is given as $value this can be given as TRUE to create a WEAKREFERENCE
-	 * @return \F3\PHPCR\ValueInterface
-	 * @throws \F3\PHPCR\ValueFormatException is thrown if the specified value cannot be converted to the specified type.
-	 * @throws \F3\PHPCR\RepositoryException if the specified Node is not referenceable, the current Session is no longer active, or another error occurs.
-	 * @throws \IllegalArgumentException if the specified DateTime value cannot be expressed in the ISO 8601-based format defined in the JCR 2.0 specification and the implementation does not support dates incompatible with that format.
+	 * @return PHPCR_ValueInterface
+	 * @throws PHPCR_ValueFormatException is thrown if the specified value cannot be converted to the specified type.
+	 * @throws PHPCR_RepositoryException if the specified Node is not referenceable, the current Session is no longer active, or another error occurs.
+	 * @throws IllegalArgumentException if the specified DateTime value cannot be expressed in the ISO 8601-based format defined in the JCR 2.0 specification and the implementation does not support dates incompatible with that format.
 	 */
 	public function createValue($value, $type = NULL, $weak = FALSE);
 

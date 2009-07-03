@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: LoginException.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -32,10 +31,10 @@ namespace F3\PHPCR;
  * Session.impersonate(Credentials) if the specified credentials are invalid.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: LoginException.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class LoginException extends \F3\PHPCR\RepositoryException {
+class PHPCR_LoginException extends PHPCR_RepositoryException {
 }
 
 ?>

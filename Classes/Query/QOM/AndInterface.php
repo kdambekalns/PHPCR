@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: AndInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -36,22 +35,22 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: AndInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface AndInterface extends \F3\PHPCR\Query\QOM\ConstraintInterface {
+interface PHPCR_Query_QOM_AndInterface extends PHPCR_Query_QOM_ConstraintInterface {
 
 	/**
 	 * Gets the first constraint.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\ConstraintInterface the constraint; non-null
+	 * @return PHPCR_Query_QOM_ConstraintInterface the constraint; non-null
 	 */
 	public function getConstraint1();
 
 	/**
 	 * Gets the second constraint.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\ConstraintInterface the constraint; non-null
+	 * @return PHPCR_Query_QOM_ConstraintInterface the constraint; non-null
 	 */
 	public function getConstraint2();
 

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: PreparedQueryInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,21 +33,21 @@ namespace F3\PHPCR\Query;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: PreparedQueryInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface PreparedQueryInterface extends \F3\PHPCR\Query\QueryInterface {
+interface PHPCR_Query_PreparedQueryInterface extends PHPCR_Query_QueryInterface {
 
 	/**
 	 * Binds the given value to the variable named $varName.
 	 *
 	 * @param string $varName name of variable in query
-	 * @param \F3\PHPCR\ValueInterface $value value to bind
+	 * @param PHPCR_ValueInterface $value value to bind
 	 * @return void
-	 * @throws \InvalidArgumentException if $varName is not a valid variable in this query.
+	 * @throws InvalidArgumentException if $varName is not a valid variable in this query.
 	 * @throws RepositoryException if an error occurs.
 	 */
-	public function bindValue($varName, \F3\PHPCR\ValueInterface $value);
+	public function bindValue($varName, PHPCR_ValueInterface $value);
 
 }
 

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: RowInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,17 +32,17 @@ namespace F3\PHPCR\Query;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: RowInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface RowInterface {
+interface PHPCR_Query_RowInterface {
 
 	/**
 	 * Returns an array of all the values in the same order as the column names
 	 * returned by QueryResult.getColumnNames().
 	 *
 	 * @return array a Value array.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @throws PHPCR_RepositoryException if an error occurs
 	 */
 	public function getValues();
 
@@ -51,9 +50,9 @@ interface RowInterface {
 	 * Returns the value of the indicated column in this Row.
 	 *
 	 * @param string $columnName name of query result table column
-	 * @return \F3\PHPCR\ValueInterface a Value
-	 * @throws \F3\PHPCR\ItemNotFoundException if columnName s not among the column names of the query result table.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_ValueInterface a Value
+	 * @throws PHPCR_ItemNotFoundException if columnName s not among the column names of the query result table.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getValue($columnName);
 
@@ -62,8 +61,8 @@ interface RowInterface {
 	 * if given.
 	 *
 	 * @param string $selectorName
-	 * @return \F3\PHPCR\NodeInterface a Node
-	 * @throws \F3\PHPCR\RepositoryException if selectorName is not the alias of a selector in this query or if another error occurs.
+	 * @return PHPCR_NodeInterface a Node
+	 * @throws PHPCR_RepositoryException if selectorName is not the alias of a selector in this query or if another error occurs.
 	 */
 	public function getNode($selectorName = NULL);
 
@@ -73,7 +72,7 @@ interface RowInterface {
 	 *
 	 * @param string $selectorName
 	 * @return string
-	 * @throws \F3\PHPCR\RepositoryException if selectorName is not the alias of a selector in this query or if another error occurs.
+	 * @throws PHPCR_RepositoryException if selectorName is not the alias of a selector in this query or if another error occurs.
 	 */
 	public function getPath($selectorName = NULL);
 
@@ -89,11 +88,11 @@ interface RowInterface {
 	 *
 	 * Note, in JCR-SQL2 a FullTextSearchScore AQM object is represented by a
 	 * SCORE() function. In JCR-JQOM it is represented by a Java object of type
-	 * \F3\PHPCR\Query\QOM\FullTextSearchScoreInterface.
+	 * PHPCR_Query_QOM_FullTextSearchScoreInterface.
 	 *
 	 * @param string $selectorName
 	 * @return float
-	 * @throws \F3\PHPCR\RepositoryException if selectorName is not the alias of a selector in this query or (in case of no given selectorName) if this query has more than one selector (and therefore, this Row corresponds to more than one Node) or if another error occurs.
+	 * @throws PHPCR_RepositoryException if selectorName is not the alias of a selector in this query or (in case of no given selectorName) if this query has more than one selector (and therefore, this Row corresponds to more than one Node) or if another error occurs.
 	 */
 	public function getScore($selectorName = NULL);
 

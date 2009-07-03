@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,15 +32,15 @@ namespace F3\PHPCR\NodeType;
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface NodeTypeIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_NodeType_NodeTypeIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next NodeType in the iteration.
 	 *
-	 * @return \F3\PHPCR\NodeTypeInterface the next NodeType in the iteration
+	 * @return PHPCR_NodeTypeInterface the next NodeType in the iteration
 	 * @throws OutOfBoundsException if iteration has no more NodeTypes
 	 */
 	public function nextNodeType();

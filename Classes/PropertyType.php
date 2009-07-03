@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: PropertyType.php 1818 2009-01-28 16:46:59Z k-fish $
  */
 
 /**
@@ -45,7 +44,7 @@ namespace F3\PHPCR;
  * UNDEFINED can be used within a property definition (see 4.7.5 Property Definitions) to specify that the property in question may be of any type. However, it cannot be the actual type of any property instance. For example it will never be returned by Property.getType() and (in level 2 implementations) it cannot be assigned as the type when creating a new property.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: PropertyType.php 1818 2009-01-28 16:46:59Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
 final class PropertyType {
@@ -317,25 +316,25 @@ final class PropertyType {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function valueFromType($type) {
-		switch (\F3\PHP6\Functions::strtolower($type)) {
+		switch (PHPCR_Functions::strtolower($type)) {
 			case 'string':
-				return \F3\PHPCR\PropertyType::STRING;
+				return PHPCR_PropertyType::STRING;
 				break;
 			case 'boolean':
-				return \F3\PHPCR\PropertyType::BOOLEAN;
+				return PHPCR_PropertyType::BOOLEAN;
 				break;
 			case 'integer':
-				return \F3\PHPCR\PropertyType::LONG;
+				return PHPCR_PropertyType::LONG;
 				break;
 			case 'float':
 			case 'double':
-				return \F3\PHPCR\PropertyType::DOUBLE;
+				return PHPCR_PropertyType::DOUBLE;
 				break;
 			case 'datetime':
-				return \F3\PHPCR\PropertyType::DATE;
+				return PHPCR_PropertyType::DATE;
 				break;
 			default:
-				return \F3\PHPCR\PropertyType::UNDEFINED;
+				return PHPCR_PropertyType::UNDEFINED;
 		}
 	}
 }

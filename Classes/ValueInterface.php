@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: ValueInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  */
 
 /**
@@ -52,17 +51,17 @@ namespace F3\PHPCR;
  * omitted in this PHP port of the API.
  *
  * @package PHPCR
- * @version  $Id$
+ * @version  $Id: ValueInterface.php 2636 2009-06-23 09:10:29Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface ValueInterface {
+interface PHPCR_ValueInterface {
 
 	/**
 	 * Returns a string representation of this value.
 	 *
 	 * @return string A string representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion to a String is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ValueFormatException if conversion to a String is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getString();
 
@@ -71,8 +70,8 @@ interface ValueInterface {
 	 * methods to access the binary data itself. Uses the standard conversion to binary
 	 * (see JCR specification).
 	 *
-	 * @return \F3\PHPCR\BinaryInterface A Binary representation of this value.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_BinaryInterface A Binary representation of this value.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getBinary();
 
@@ -80,8 +79,8 @@ interface ValueInterface {
 	 * Returns a long representation of this value.
 	 *
 	 * @return string A long representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion to a long is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ValueFormatException if conversion to a long is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getLong();
 
@@ -89,8 +88,8 @@ interface ValueInterface {
 	 * Returns a BigDecimal representation of this value.
 	 *
 	 * @return string A double representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ValueFormatException if conversion is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getDecimal();
 
@@ -98,20 +97,20 @@ interface ValueInterface {
 	 * Returns a double representation of this value.
 	 *
 	 * @return string A double representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion to a double is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ValueFormatException if conversion to a double is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getDouble();
 
 	/**
-	 * Returns a \DateTime representation of this value.
+	 * Returns a DateTime representation of this value.
 	 *
 	 * The object returned is a copy of the stored value, so changes to it are
 	 * not reflected in internal storage.
 	 *
-	 * @return \DateTime A \DateTime representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion to a \DateTime is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return DateTime A DateTime representation of the value of this property.
+	 * @throws PHPCR_ValueFormatException if conversion to a DateTime is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getDate();
 
@@ -119,8 +118,8 @@ interface ValueInterface {
 	 * Returns a boolean representation of this value.
 	 *
 	 * @return string A boolean representation of the value of this property.
-	 * @throws \F3\PHPCR\ValueFormatException if conversion to a boolean is not possible.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_ValueFormatException if conversion to a boolean is not possible.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getBoolean();
 

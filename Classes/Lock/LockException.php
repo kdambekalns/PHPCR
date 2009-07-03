@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Lock;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Lock;
 /**
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockException.php 1818 2009-01-28 16:46:59Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Lock;
  *
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockException.php 1818 2009-01-28 16:46:59Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class LockException extends \F3\PHPCR\RepositoryException {
+class PHPCR_Lock_LockException extends PHPCR_RepositoryException {
 
 	/**
 	 * Absolute path of the node that caused the error, in normalized, standard

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: FullTextSearchInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -72,10 +71,10 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: FullTextSearchInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface FullTextSearchInterface extends \F3\PHPCR\Query\QOM\ConstraintInterface {
+interface PHPCR_Query_QOM_FullTextSearchInterface extends PHPCR_Query_QOM_ConstraintInterface {
 
 	/**
 	 * Gets the name of the selector against which to apply this constraint.
@@ -94,7 +93,7 @@ interface FullTextSearchInterface extends \F3\PHPCR\Query\QOM\ConstraintInterfac
 	/**
 	 * Gets the full-text search expression.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\StaticOperandInterface the full-text search expression; non-null
+	 * @return PHPCR_Query_QOM_StaticOperandInterface the full-text search expression; non-null
 	 */
 	public function getFullTextSearchExpression();
 

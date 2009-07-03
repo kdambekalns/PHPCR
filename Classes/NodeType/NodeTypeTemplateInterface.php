@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeTemplateInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  */
 
 /**
@@ -45,10 +44,10 @@ namespace F3\PHPCR\NodeType;
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeTypeTemplateInterface.php 1979 2009-03-09 15:44:15Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface NodeTypeTemplateInterface extends \F3\PHPCR\NodeType\NodeTypeDefinitionInterface {
+interface PHPCR_NodeType_NodeTypeTemplateInterface extends PHPCR_NodeType_NodeTypeDefinitionInterface {
 
 	/**
 	 * Sets the name of the node type.

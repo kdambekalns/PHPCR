@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: PropertyDefinitionTemplateInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -40,10 +39,10 @@ the default values assumed when a new empty PropertyDefinitionTemplate is create
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: PropertyDefinitionTemplateInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface PropertyDefinitionTemplateInterface extends \F3\PHPCR\NodeType\PropertyDefinitionInterface {
+interface PHPCR_NodeType_PropertyDefinitionTemplateInterface extends PHPCR_NodeType_PropertyDefinitionInterface {
 
 	/**
 	 * Sets the name of the property.

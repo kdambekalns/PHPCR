@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Observation;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Observation;
 /**
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventListenerIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -34,15 +33,15 @@ namespace F3\PHPCR\Observation;
  *
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventListenerIteratorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface EventListenerIteratorInterface extends \F3\PHPCR\RangeIteratorInterface {
+interface PHPCR_Observation_EventListenerIteratorInterface extends PHPCR_RangeIteratorInterface {
 
 	/**
 	 * Returns the next EventListener in the iteration.
 	 *
-	 * @return \F3\PHPCR\Observation\EventListenerInterface the next EventListener in the iteration
+	 * @return PHPCR_Observation_EventListenerInterface the next EventListener in the iteration
 	 * @throws OutOfBoundsException if iteration has no more EventListeners
 	 */
 	public function nextEventListener();

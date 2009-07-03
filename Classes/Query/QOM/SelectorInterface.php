@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: SelectorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -41,10 +40,10 @@ namespace F3\PHPCR\Query\QOM;
 *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: SelectorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface SelectorInterface extends \F3\PHPCR\Query\QOM\SourceInterface {
+interface PHPCR_Query_QOM_SelectorInterface extends PHPCR_Query_QOM_SourceInterface {
 
 	/**
 	 * Gets the name of the required node type.

@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Retention;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Retention;
 /**
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: RetentionPolicyInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,16 +32,16 @@ namespace F3\PHPCR\Retention;
  *
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: RetentionPolicyInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface RetentionPolicyInterface {
+interface PHPCR_Retention_RetentionPolicyInterface {
 
 	/**
 	 * Returns the name of the retention policy. A JCR name.
 	 *
 	 * @return string the name of the access control policy. A JCR name.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getName();
 

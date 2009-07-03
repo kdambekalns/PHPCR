@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Query\QOM;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Query\QOM;
 /**
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryObjectModelInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -59,36 +58,36 @@ namespace F3\PHPCR\Query\QOM;
  *
  * @package PHPCR
  * @subpackage Query
- * @version $Id$
+ * @version $Id: QueryObjectModelInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface QueryObjectModelInterface extends \F3\PHPCR\Query\PreparedQueryInterface {
+interface PHPCR_Query_QOM_QueryObjectModelInterface extends PHPCR_Query_PreparedQueryInterface {
 
 	/**
 	 * Gets the node-tuple source for this query.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\SourceInterface the node-tuple source; non-null
+	 * @return PHPCR_Query_QOM_SourceInterface the node-tuple source; non-null
 	*/
 	public function getSource();
 
 	/**
 	 * Gets the constraint for this query.
 	 *
-	 * @return \F3\PHPCR\Query\QOM\ConstraintInterface the constraint, or null if none
+	 * @return PHPCR_Query_QOM_ConstraintInterface the constraint, or null if none
 	*/
 	public function getConstraint();
 
 	/**
 	 * Gets the orderings for this query.
 	 *
-	 * @return array an array of zero or more \F3\PHPCR\Query\QOM\OrderingInterface; non-null
+	 * @return array an array of zero or more PHPCR_Query_QOM_OrderingInterface; non-null
 	*/
 	public function getOrderings();
 
 	/**
 	 * Gets the columns for this query.
 	 *
-	 * @return array an array of zero or more \F3\PHPCR\Query\QOM\ColumnInterface; non-null
+	 * @return array an array of zero or more PHPCR_Query_QOM_ColumnInterface; non-null
 	*/
 	public function getColumns();
 

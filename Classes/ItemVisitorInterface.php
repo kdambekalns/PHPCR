@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: ItemVisitorInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -38,21 +37,21 @@ namespace F3\PHPCR;
  * through the tree performing some operation on each Item.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: ItemVisitorInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface ItemVisitorInterface {
+interface PHPCR_ItemVisitorInterface {
 
 	/**
 	 * This method is called when the ItemVisitor is passed to the accept method
 	 * of a Node or Property. If this method throws an exception the visiting
 	 * process is aborted.
 	 *
-	 * @param \F3\PHPCR\NodeInterface|\F3\PHPCR\PropertyInterface $item a node or property accepting this visitor
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs
+	 * @param PHPCR_NodeInterface|PHPCR_PropertyInterface $item a node or property accepting this visitor
+	 * @throws PHPCR_RepositoryException if an error occurs
 	*/
-	public function visit(\F3\PHPCR\ItemInterface $item);
+	public function visit(PHPCR_ItemInterface $item);
 
 }
 

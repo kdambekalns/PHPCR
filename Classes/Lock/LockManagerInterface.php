@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Lock;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Lock;
 /**
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockManagerInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\Lock;
  *
  * @package PHPCR
  * @subpackage Lock
- * @version $Id$
+ * @version $Id: LockManagerInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface LockManagerInterface {
+interface PHPCR_Lock_LockManagerInterface {
 
 	/**
 	 * Adds the specified lock token to the current Session. Holding a lock token
@@ -45,8 +44,8 @@ interface LockManagerInterface {
 	 *
 	 * @param string $lockToken - a lock token (a string).
 	 * @return void
-	 * @throws \F3\PHPCR\Lock\LockException if the specified lock token is already held by another Session and the implementation does not support simultaneous ownership of open-scoped locks.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_Lock_LockException if the specified lock token is already held by another Session and the implementation does not support simultaneous ownership of open-scoped locks.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function addLockToken($lockToken);
 
@@ -56,11 +55,11 @@ interface LockManagerInterface {
 	 * above that node.
 	 *
 	 * @param string $absPath - absolute path of node for which to obtain the lock
-	 * @return \F3\PHPCR\Lock\LockInterface The applicable Lock object.
-	 * @throws \F3\PHPCR\Lock\LockException if no lock applies to this node.
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have sufficient access to get the lock.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node is found at $absPath
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_Lock_LockInterface The applicable Lock object.
+	 * @throws PHPCR_Lock_LockException if no lock applies to this node.
+	 * @throws PHPCR_AccessDeniedException if the current session does not have sufficient access to get the lock.
+	 * @throws PHPCR_PathNotFoundException if no node is found at $absPath
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function getLock($absPath);
 
@@ -70,7 +69,7 @@ interface LockManagerInterface {
 	 * session-scoped locks do not have tokens.
 	 *
 	 * @return array an array of lock tokens (strings)
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getLockTokens();
 
@@ -82,8 +81,8 @@ interface LockManagerInterface {
 	 *
 	 * @param string $absPath absolute path of node
 	 * @return boolean a boolean.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node is found at $absPath
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node is found at $absPath
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function holdsLock($absPath);
 
@@ -131,12 +130,12 @@ interface LockManagerInterface {
 	 * @param boolean $isSessionScoped if true, this lock expires with the current session; if false it expires when explicitly or automatically unlocked for some other reason.
 	 * @param integer $timeoutHint desired lock timeout in seconds (servers are free to ignore this value); specify Long.MAX_VALUE for no timeout.
 	 * @param string $ownerInfo a string containing owner information supplied by the client; servers are free to ignore this value.
-	 * @return \F3\PHPCR\Lock\LockInterface A Lock object containing a lock token.
-	 * @throws \F3\PHPCR\Lock\LockException if this node is not mix:lockable or this node is already locked or isDeep is true and a descendant node of this node already holds a lock.
-	 * @throws \F3\PHPCR\AccessDeniedException if this session does not have sufficient access to lock this node.
-	 * @throws \F3\PHPCR\InvalidItemStateException if this node has pending unsaved changes.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node is found at $absPath
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @return PHPCR_Lock_LockInterface A Lock object containing a lock token.
+	 * @throws PHPCR_Lock_LockException if this node is not mix:lockable or this node is already locked or isDeep is true and a descendant node of this node already holds a lock.
+	 * @throws PHPCR_AccessDeniedException if this session does not have sufficient access to lock this node.
+	 * @throws PHPCR_InvalidItemStateException if this node has pending unsaved changes.
+	 * @throws PHPCR_PathNotFoundException if no node is found at $absPath
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function lock($absPath, $isDeep, $isSessionScoped, $timeoutHint, $ownerInfo);
 
@@ -147,8 +146,8 @@ interface LockManagerInterface {
 	 *
 	 * @param string $absPath absolute path of node
 	 * @return boolean a boolean.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node is found at $absPath
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_PathNotFoundException if no node is found at $absPath
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function isLocked($absPath);
 
@@ -157,8 +156,8 @@ interface LockManagerInterface {
 	 *
 	 * @param string $lockToken - a lock token (a string)
 	 * @return void
-	 * @throws \F3\PHPCR\Lock\LockException if the current Session does not hold the specified lock token.
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_Lock_LockException if the current Session does not hold the specified lock token.
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function removeLockToken($lockToken);
 
@@ -169,7 +168,7 @@ interface LockManagerInterface {
 	 *
 	 * If the node does not currently hold a lock or holds a lock for which this
 	 * Session is not the owner and is not a "lock-superuser", then a
-	 * \F3\PHPCR\Lock\LockException is thrown.
+	 * PHPCR_Lock_LockException is thrown.
 	 * Note however that the system may give permission to a non-owning session
 	 * to unlock a lock. Typically such "lock-superuser" capability is intended
 	 * to facilitate administrational clean-up of orphaned open-scoped locks.
@@ -179,11 +178,11 @@ interface LockManagerInterface {
 	 *
 	 * @param string $absPath - absolute path of node to be unlocked
 	 * @return void
-	 * @throws \F3\PHPCR\Lock\LockException if this node does not currently hold a lock or holds a lock for which this Session does not have the correct lock token
-	 * @throws \F3\PHPCR\AccessDeniedException if the current session does not have permission to unlock this node.
-	 * @throws \F3\PHPCR\InvalidItemStateException if this node has pending unsaved changes.
-	 * @throws \F3\PHPCR\PathNotFoundException if no node is found at $absPath
-	 * @throws \F3\PHPCR\RepositoryException if another error occurs.
+	 * @throws PHPCR_Lock_LockException if this node does not currently hold a lock or holds a lock for which this Session does not have the correct lock token
+	 * @throws PHPCR_AccessDeniedException if the current session does not have permission to unlock this node.
+	 * @throws PHPCR_InvalidItemStateException if this node has pending unsaved changes.
+	 * @throws PHPCR_PathNotFoundException if no node is found at $absPath
+	 * @throws PHPCR_RepositoryException if another error occurs.
 	 */
 	public function unlock($absPath);
 

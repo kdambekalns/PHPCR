@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -24,7 +23,7 @@ namespace F3\PHPCR;
 
 /**
  * @package PHPCR
- * @version $Id$
+ * @version $Id: InvalidItemStateException.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -35,10 +34,10 @@ namespace F3\PHPCR;
  * been removed from the workspace.
  *
  * @package PHPCR
- * @version $Id$
+ * @version $Id: InvalidItemStateException.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-class InvalidItemStateException extends \F3\PHPCR\RepositoryException {
+class PHPCR_InvalidItemStateException extends PHPCR_RepositoryException {
 }
 
 ?>

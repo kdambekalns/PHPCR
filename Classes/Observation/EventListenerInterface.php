@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Observation;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Observation;
 /**
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventListenerInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -38,18 +37,18 @@ namespace F3\PHPCR\Observation;
  *
  * @package PHPCR
  * @subpackage Observation
- * @version $Id$
+ * @version $Id: EventListenerInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface EventListenerInterface {
+interface PHPCR_Observation_EventListenerInterface {
 
 	/**
 	 * This method is called when a bundle of events is dispatched.
 	 *
-	 * @param \F3\PHPCR\Observation\EventIteratorInterface $events - The event set received.
+	 * @param PHPCR_Observation_EventIteratorInterface $events - The event set received.
 	 * @return void
 	 */
-	public function onEvent(\F3\PHPCR\Observation\EventIteratorInterface $events);
+	public function onEvent(PHPCR_Observation_EventIteratorInterface $events);
 
 }
 ?>

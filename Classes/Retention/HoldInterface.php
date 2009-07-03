@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\Retention;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\Retention;
 /**
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: HoldInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  */
 
 /**
@@ -38,16 +37,16 @@ namespace F3\PHPCR\Retention;
  *
  * @package PHPCR
  * @subpackage Retention
- * @version $Id$
+ * @version $Id: HoldInterface.php 2191 2009-05-07 19:49:06Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface HoldInterface {
+interface PHPCR_Retention_HoldInterface {
 
 	/**
 	 * Returns true if this Hold is deep.
 	 *
 	 * @return boolean TRUE if this Hold is deep.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function isDeep();
 
@@ -55,7 +54,7 @@ interface HoldInterface {
 	 * Returns the name of this Hold. A JCR name.
 	 *
 	 * @return string the name of this Hold. A JCR name.
-	 * @throws \F3\PHPCR\RepositoryException if an error occurs.
+	 * @throws PHPCR_RepositoryException if an error occurs.
 	 */
 	public function getName();
 

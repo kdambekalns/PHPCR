@@ -1,6 +1,5 @@
 <?php
 declare(ENCODING = 'utf-8');
-namespace F3\PHPCR\NodeType;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "PHPCR".                      *
@@ -25,7 +24,7 @@ namespace F3\PHPCR\NodeType;
 /**
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeDefinitionInterface.php 1811 2009-01-28 12:04:49Z robert $
  */
 
 /**
@@ -33,10 +32,10 @@ namespace F3\PHPCR\NodeType;
  *
  * @package PHPCR
  * @subpackage NodeType
- * @version $Id$
+ * @version $Id: NodeDefinitionInterface.php 1811 2009-01-28 12:04:49Z robert $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-interface NodeDefinitionInterface extends \F3\PHPCR\NodeType\ItemDefinitionInterface {
+interface PHPCR_NodeType_NodeDefinitionInterface extends PHPCR_NodeType_ItemDefinitionInterface {
 
 	/**
 	 * Gets the minimum set of primary node types that the child node must have.
@@ -54,7 +53,7 @@ interface NodeDefinitionInterface extends \F3\PHPCR\NodeType\ItemDefinitionInter
 	 * object may be acquired (in the form of a NodeDefinitionTemplate) that is
 	 * not attached to a live NodeType. In such cases this method returns NULL.
 	 *
-	 * @return \F3\PHPCR\NodeType\NodeTypeInterface an array of NodeType objects.
+	 * @return PHPCR_NodeType_NodeTypeInterface an array of NodeType objects.
 	 */
 	public function getRequiredPrimaryTypes();
 
@@ -84,7 +83,7 @@ interface NodeDefinitionInterface extends \F3\PHPCR\NodeType\ItemDefinitionInter
 	 * object may be acquired (in the form of a NodeDefinitionTemplate) that is
 	 * not attached to a live NodeType. In such cases this method returns null.
 	 *
-	 * @return \F3\PHPCR\NodeType\NodeTypeInterface a NodeType.
+	 * @return PHPCR_NodeType_NodeTypeInterface a NodeType.
 	 */
 	public function getDefaultPrimaryType();
 
