@@ -205,7 +205,7 @@ interface PHPCR_SessionInterface {
 	 *
 	 * @param string $absPath An absolute path.
 	 * @return boolean a boolean
-	 * @throws 3_PHPCR_RepositoryException if absPath is not a well-formed absolute path.
+	 * @throws PHPCR_RepositoryException if absPath is not a well-formed absolute path.
 	 */
 	public function nodeExists($absPath);
 

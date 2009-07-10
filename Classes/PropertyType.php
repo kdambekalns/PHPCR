@@ -47,7 +47,7 @@ declare(ENCODING = 'utf-8');
  * @version $Id: PropertyType.php 1818 2009-01-28 16:46:59Z k-fish $
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-final class PropertyType {
+final class PHPCR_PropertyType {
 
 	/**
 	 * This constant can be used within a property definition to specify that
@@ -316,25 +316,25 @@ final class PropertyType {
 	 * @author Karsten Dambekalns <karsten@typo3.org>
 	 */
 	static public function valueFromType($type) {
-		switch (PHPCR_Functions::strtolower($type)) {
+		switch (strtolower($type)) {
 			case 'string':
-				return PHPCR_PropertyType::STRING;
+				return self::STRING;
 				break;
 			case 'boolean':
-				return PHPCR_PropertyType::BOOLEAN;
+				return self::BOOLEAN;
 				break;
 			case 'integer':
-				return PHPCR_PropertyType::LONG;
+				return self::LONG;
 				break;
 			case 'float':
 			case 'double':
-				return PHPCR_PropertyType::DOUBLE;
+				return self::DOUBLE;
 				break;
 			case 'datetime':
-				return PHPCR_PropertyType::DATE;
+				return self::DATE;
 				break;
 			default:
-				return PHPCR_PropertyType::UNDEFINED;
+				return self::UNDEFINED;
 		}
 	}
 }
