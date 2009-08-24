@@ -41,7 +41,7 @@ declare(ENCODING = 'utf-8');
  * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  */
-final class PropertyType {
+final class PHPCR_PropertyType {
 
 	/**
 	 * This constant can be used within a property definition to specify that
