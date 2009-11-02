@@ -22,53 +22,14 @@ declare(ENCODING = 'utf-8');
  *                                                                        */
 
 /**
- * An Iterator interface
- *
- * The methods next(), hasNext() and remove() as in java.util.Iterator
- * append() is something we thought would be nice...
+ * Interface for use by getImportContentHandler. It is currently acting as a
+ * sign that whatever we want to return from getImportContentHandler needs to be
+ * defined in more detail.
  *
  * @version $Id$
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ * @license http://opensource.org/licenses/bsd-license.php Simplified BSD License
  */
-interface PHPCR_IteratorInterface extends Iterator {
+interface PHPCR_ContentHandlerInterface {}
 
-	/**
-	 * Returns the next element. Commented as PHP dows not allow overriding methods from extended interfaces...
-	 *
-	 * @return mixed
-	 * @throws OutOfBoundsException if no next element exists
-	 */
-	//public function next();
-
-	/**
-	 * Returns true if the iteration has more elements.
-	 *
-	 * This is an alias of valid().
-	 *
-	 * @return boolean
-	 * @api
-	 */
-	public function hasNext();
-
-	/**
-	 * Removes from the underlying collection the last element returned by the iterator.
-	 * This method can be called only once per call to next. The behavior of an iterator
-	 * is unspecified if the underlying collection is modified while the iteration is in
-	 * progress in any way other than by calling this method.
-	 *
-	 * @return void
-	 * @throws IllegalStateException if the next method has not yet been called, or the remove method has already been called after the last call to the next method.
-	 * @api
-	 */
-	public function remove();
-
-	/**
-	 * Append a new element to the iteration
-	 *
-	 * @param mixed $element
-	 * @return void
-	 * @api
-	 */
-	public function append($element);
-}
 ?>

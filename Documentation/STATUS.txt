@@ -11,15 +11,7 @@ The DONE section lists what has been done already.
 
 == WIP ==
 
-# Version
-	VersionManager (restore method is pending)
-
 == OPEN ==
-
-# Util
-	TraversingItemVisitor
-	TraversingItemVisitor.Default
-
 
 == DONE ==
 
@@ -107,6 +99,8 @@ The DONE section lists what has been done already.
 	NamedAccessControlPolicy
 	Privilege
 # Util
+	TraversingItemVisitor
+	TraversingItemVisitor.Default (skipped)
 # Version
 	ActivityViolationException
 	LabelExistsVersionException
@@ -115,6 +109,7 @@ The DONE section lists what has been done already.
 	VersionException
 	VersionHistory
 	VersionIterator
+	VersionManager
 AccessDeniedException
 Binary
 Credentials
